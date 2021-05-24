@@ -2,6 +2,10 @@
 
 Hacked-together RSS server for Drop.com products
 
+![screenshot](screenshot.png)
+
+*Results in the excellent [NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire) app.*
+
 ## Motivation
 
 It's very clear that people want RSS for Drop: [Exhibit A](https://drop.com/talk/259/talk/494355), [Exhibit B](https://drop.com/talk/1093/talk/1574182), [Exhibit C](https://drop.com/talk/1093/talk/1574194)
