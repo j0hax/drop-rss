@@ -64,7 +64,7 @@ def _update_feed(sleep=600):
     while True:
         with _feed_lock:
             _feed_string = getFeed()
-            print("[THREAD] Updated feed")
+            print("[Updated feed]")
         time.sleep(sleep)
 
 
@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     PORT = 8080
     with socketserver.TCPServer(("", PORT), RSSHandler) as httpd:
-        updater = Thread(target=_update_feed, daemon=True)
+        updater = Thread(target=_update_feed, name="Feed-Updater", daemon=True)
         updater.start()
         print("serving at port", PORT)
         httpd.serve_forever()
