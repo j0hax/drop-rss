@@ -82,7 +82,7 @@ class RSSHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
 
-    PORT = 8080
+    PORT = 8008
     with socketserver.TCPServer(("", PORT), RSSHandler) as httpd:
         updater = Thread(target=_update_feed, name="Feed-Updater", daemon=True)
         updater.start()
