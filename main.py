@@ -52,6 +52,7 @@ def getFeed():
                     fe.title(f"{data['name']}")
                 fe.link(href=f"https://drop.com/buy/{data['url']}")
                 fe.description(data["defaultDropBlurb"])
+                fe.enclosure(url=data["thumbImage"], type="image/png")
                 fe.published(data["startAt"])
             except:
                 print("Error generating entry.")
